@@ -141,11 +141,17 @@ header.header-area .custom-navbar .navbar-nav .nav-link {
 }
 
 .recent-work-area .column {
-  display: none; /* Hide all elements by default */
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms, visibility 600ms;
 }
 
 .recent-work-area .show {
-  display: block;
+  position: static;
+  visibility: visible;
+  opacity: 1;
 }
 
 .recent-work-area .btn.active {

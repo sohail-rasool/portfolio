@@ -155,109 +155,102 @@
     <!-- about area end -->
 
     <!-- our recent work start -->
-    <div class="recent-work-area py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1 class="text-uppercase text-center mb-3 title mb-5">Our Recent Work</h1>
-            <div class="filter-wrapper">
-              <div id="myBtnContainer" class="mb-5 d-flex justify-content-between flex-wrap" style="gap: 10px;">
-                <button class="btn active btn-outline-warning" onclick="filterSelection('all')">All</button>
-                <button class="btn btn-outline-warning" onclick="filterSelection('eCommerce')"> E-Commerce</button>
-                <button class="btn btn-outline-warning" onclick="filterSelection('corporateWeb')"> Corporate
-                  Web</button>
-                <button class="btn btn-outline-warning" onclick="filterSelection('traveltour')">Travel & Tour
-                  Web</button>
-                <button class="btn btn-outline-warning" onclick="filterSelection('hotel')">Hotel & Restaurant</button>
-                <button class="btn btn-outline-warning" onclick="filterSelection('advertising')">Online
-                  Advertising</button>
-              </div>
-              <div class="row">
-                <div class="col-12">
-
-                  <div class="column eCommerce mb-3">
-                    <div class="row">
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/service-1.png" alt="service-1">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/service-2.png" alt="service-2">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="column corporateWeb mb-3">
-                    <div class="row">
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/work.png" alt="work">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/work.png" alt="work">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="column traveltour mb-3">
-                    <div class="row">
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/service-1.png" alt="service">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/service-2.png" alt="service">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="column hotel mb-3">
-                    <div class="row">
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/work.png" alt="work">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/work.png" alt="work">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="column advertising mb-3">
-                    <div class="row">
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/service-1.png" alt="service">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="content">
-                          <img src="./assets/images/service-2.png" alt="service">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- our recent work end -->
+		<div class="recent-work-area py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="text-uppercase text-center mb-3 title mb-5">Our Recent Work</h1>
+						<div>
+							<div class="row">
+								<div class="col-12">
+									<!-- filter tabs start -->
+									<div class="container filter-wrapper">
+										<div class="row">
+											<div class="col-12">
+												<div class="row mb-5">
+													<div class="col">
+														<div class="btn-group btn-group-toggle d-flex flex-wrap" data-toggle="buttons"
+															style="gap: 20px;">
+															<label id='all' class="btn btn-outline-warning active"><input type="radio"
+																	name="shuffle-filter" value="all" checked="checked" />All</label>
+															<label id='photography' class="btn btn-outline-warning"><input type="radio"
+																	name="shuffle-filter" value="nature" />Photography</label>
+															<label id='web-development' class="btn btn-outline-warning"><input type="radio"
+																	name="shuffle-filter" value="architecture" />Web Development</label>
+															<label id='travel-tour' class="btn btn-outline-warning"><input type="radio"
+																	name="shuffle-filter" value="architecture" />Travel & Tour Web</label>
+															<label id='hotel-restaurant' class="btn btn-outline-warning"><input type="radio"
+																	name="shuffle-filter" value="architecture" />Hotel & Restaurant</label>
+															<label id='onlineAdvertising' class="btn btn-outline-warning"><input type="radio"
+																	name="shuffle-filter" value="architecture" />Online Advertising</label>
+														</div>
+													</div>
+												</div>
+												<div class="row my-shuffle-container">
+													<div class="col-4@sm picture-item column" data-groups='["animal"]'
+														data-date-created="2016-08-12" data-title="Crocodile">
+														<div class="aspect aspect--16x9">
+															<div class="aspect__inner">
+																<img
+																	src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190"
+																	alt="A close, profile view of a crocodile looking directly into the camera" />
+															</div>
+														</div>
+													</div>
+													<div class="col-4@sm picture-item column" data-groups='["city"]'
+														data-date-created="2016-06-09" data-title="Crossroads">
+														<div class="aspect aspect--16x9">
+															<div class="aspect__inner">
+																<img
+																	src="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=c7e6f790e22b5e61c2a757ead9c34759"
+																	alt="A multi-level highway stack interchange in Puxi, Shanghai" />
+															</div>
+														</div>
+													</div>
+													<div class="col-4@sm picture-item column" data-groups='["nature"]'
+														data-date-created="2015-10-20" data-title="Central Park">
+														<div class="aspect aspect--16x9">
+															<div class="aspect__inner">
+																<img
+																	src="https://images.unsplash.com/photo-1457364559154-aa2644600ebb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=3d0e3e8d72fc5667fd9fbe354e80957b"
+																	alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+															</div>
+														</div>
+													</div>
+													<div class="col-4@sm picture-item column" data-groups='["animal"]'
+														data-date-created="2016-08-12" data-title="Crocodile">
+														<div class="aspect aspect--16x9">
+															<div class="aspect__inner">
+																<img
+																	src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190"
+																	alt="A close, profile view of a crocodile looking directly into the camera" />
+															</div>
+														</div>
+													</div>
+													<div class="col-4@sm picture-item column" data-groups='["nature"]'
+														data-date-created="2015-10-20" data-title="Central Park">
+														<div class="aspect aspect--16x9">
+															<div class="aspect__inner">
+																<img
+																	src="https://images.unsplash.com/photo-1457364559154-aa2644600ebb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=3d0e3e8d72fc5667fd9fbe354e80957b"
+																	alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+															</div>
+														</div>
+													</div>
+													<div class="col-1@sm my-sizer-element"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- filter tabs end -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- our recent work end -->
 
     <!-- our serveces area start -->
     <div class="services-area py-5">
@@ -715,6 +708,7 @@
 
   <script src="./vendor/js/jquery-3_5_1.js"></script>
   <script src="./vendor/js/bootstrap.bundle.min.js"></script>
+  <script src="./vendor/js/shuffle.js"></script>
   <script src="./vendor/js/owl.carousel.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>

@@ -1,84 +1,65 @@
 // Owl carousel js start
 
-$(function() {
-
-    $("#customers-testimonials").owlCarousel({
-
-        items:1,
-        autoplay: true,
-        loop: true,
-        smartSpeed: 700,
-        autoplayHoverPause: true,
-    });
-
-});
-  // Owl carousel js end
-
-  
-
-//   filter js start
-
-
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+$(document).ready(function () {
+  var owl = $("#customers-testimonials");
+  owl.owlCarousel({
+    items: 1,
+    pagination: true,
+    loop: true,
+    autoplay: true,
   });
-}
 
-//   filter js end
-
+  //Following code would do the trick.
+  $(document.documentElement).keyup(function (event) {
+    if (event.keyCode == 37) {
+      owl.trigger('prev.owl.carousel');
+    } else if (event.keyCode == 39) {
+      owl.trigger('next.owl.carousel');
+    }
+  });
+});
+// Owl carousel js end
 
 // Accordian js start
-$("#accordionExample").on("hide.bs.collapse show.bs.collapse", e => {
-    $(e.target)
-      .prev()
-      .find("i:last-child")
-      .toggleClass("fa-minus fa-plus");
-  });
-  
+$("#accordionExample").on("hide.bs.collapse show.bs.collapse", (e) => {
+  $(e.target).prev().find("i:last-child").toggleClass("fa-minus fa-plus");
+});
 
-  $(document).on("click", '[data-toggle="lightbox"]', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-  });
+$(document).on("click", '[data-toggle="lightbox"]', function (event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
 
-  // Accordian js end
+// Accordian js end
 
+// filter js start
+
+var Shuffle = window.Shuffle;
+var element = document.querySelector(".my-shuffle-container");
+var sizer = element.querySelector(".my-sizer-element");
+
+var shuffleInstance = new Shuffle(element, {
+  itemSelector: ".picture-item",
+  sizer: sizer, // could also be a selector: '.my-sizer-element'
+});
+// shuffleInstance.filter('animal');
+$("#all").on("click", function () {
+  shuffleInstance.filter();
+});
+$("#photography").on("click", function () {
+  shuffleInstance.filter("animal");
+});
+$("#web-development").on("click", function () {
+  shuffleInstance.filter("city");
+});
+$("#travel-tour").on("click", function () {
+  shuffleInstance.filter("nature");
+});
+$("#hotel-restaurant").on("click", function () {
+  shuffleInstance.filter("city");
+});
+$("#onlineAdvertising").on("click", function () {
+  shuffleInstance.filter("animal");
+});
+
+// filter js end
